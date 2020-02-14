@@ -1,0 +1,64 @@
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Google</title>
+<script type="text/javascript" src="js/note.js"></script>
+</head>
+<body>
+<pre>
+<span data-note='{"htmlContent": "Division correspondant à l&apos;entête", "startTime": 5000, "runningTime": 10000}'>IDENTIFICATION DIVISION</span><span data-note='{"htmlContent": "Une phrase se termine par un point", "startTime": 1000, "runningTime": 4000}'>.</span>
+<span data-note='{"htmlContent": "Permet de spécifier le nom du programme", "startTime": 15000, "runningTime": 5000}'>PROGRAM-ID.</span> <span data-note='{"htmlContent": "Nom du programme", "startTime": 20000, "runningTime": 5000}'>PlusOuMoins.</span>
+
+<span data-note='{"htmlContent": "Division correspondant aux déclarations", "startTime": 5000, "runningTime": 10000}'>DATA DIVISION</span>.
+<span data-note='{"htmlContent": "Section pour déclarer les variables", "startTime": 25000, "runningTime": 5000}'>WORKING-STORAGE SECTION.</span>
+
+<span data-note='{"htmlContent": "Ceci est une variable COBOL", "startTime": 30000, "runningTime": 4000}'>77</span> <span data-note='{"htmlContent": "Nom de la variable", "startTime": 34000, "runningTime": 4000}'>seed</span> <span data-note='{"htmlContent": "Définition du format de la variable", "startTime": 38000, "runningTime": 4000}'>PIC</span> <span data-note='{"htmlContent": "Format de la variable : 8 chiffres", "startTime": 42000, "runningTime": 4000}'>9(8)</span> <span data-note='{"htmlContent": "Valeur par défaut de la variable", "startTime": 46000, "runningTime": 4000}'>VALUE 0</span>.
+77 nbAleatoire PIC 999.
+77 nbEntree PIC 999.
+
+<span data-note='{"htmlContent": "Section pour gérer les entrées sorties", "startTime": 25000, "runningTime": 5000}'>SCREEN SECTION.</span>
+
+<span data-note='{"htmlContent": "Etiquette correspondant à la racine de la hiérarchie", "startTime": 50000, "runningTime": 4000}'>1</span> <span data-note='{"htmlContent": "Nom du paragraphe qui sera utilisé pour appeler son affichage", "startTime": 54000, "runningTime": 4000}'>pla-titre</span>.
+    2 BLANK SCREEN.
+    2 LINE 2 COL 15 VALUE 'Jeu du plus et du moins !'.
+
+<span data-note='{"htmlContent": "Etiquette correspondant à la racine de la hiérarchie", "startTime": 50000, "runningTime": 4000}'>1</span> <span data-note='{"htmlContent": "Nom du paragraphe qui sera utilisé pour appeler son affichage", "startTime": 54000, "runningTime": 4000}'>pla-plus</span>.
+    2 LINE 4 COL 5 VALUE 'C''est plus !'.
+
+<span data-note='{"htmlContent": "Etiquette correspondant à la racine de la hiérarchie", "startTime": 50000, "runningTime": 4000}'>1</span> <span data-note='{"htmlContent": "Nom du paragraphe qui sera utilisé pour appeler son affichage", "startTime": 54000, "runningTime": 4000}'>pla-moins</span>.
+    2 LINE 4 COL 5 VALUE 'C''est moins'.
+
+<span data-note='{"htmlContent": "Etiquette correspondant à la racine de la hiérarchie", "startTime": 50000, "runningTime": 4000}'>1</span> <span data-note='{"htmlContent": "Nom du paragraphe qui sera utilisé pour appeler son affichage", "startTime": 54000, "runningTime": 4000}'>pla-trouve</span>.
+    2 LINE 4 COL 5 VALUE 'Bravo ! Vous avez trouve !'.
+
+<span data-note='{"htmlContent": "Etiquette correspondant à la racine de la hiérarchie", "startTime": 50000, "runningTime": 4000}'>1</span> <span data-note='{"htmlContent": "Nom du paragraphe qui sera utilisé pour appeler son affichage", "startTime": 54000, "runningTime": 4000}'>pls-nb</span>.
+    2 LINE 6 COL 5 VALUE 'Veuillez entrer un nombre : '.
+    2 PIC zzz TO nbEntree REQUIRED.
+
+
+<span data-note='{"htmlContent": "Division correspondant aux instructions", "startTime": 5000, "runningTime": 10000}'>PROCEDURE DIVISION.</span>
+
+INITIALIZE nbEntree.
+MOVE FUNCTION CURRENT-DATE(9:8) TO seed.
+
+DISPLAY pla-titre.
+
+COMPUTE nbAleatoire = FUNCTION RANDOM (seed) * 100 + 1.
+
+PERFORM UNTIL nbEntree = nbAleatoire
+   DISPLAY pls-nb
+   ACCEPT pls-nb
+
+   IF nbEntree > nbAleatoire THEN
+       DISPLAY pla-moins
+   ELSE
+       DISPLAY pla-plus
+   END-IF
+END-PERFORM.
+
+DISPLAY pla-trouve.
+
+STOP RUN.
+</pre>
+</body>
+</html>
