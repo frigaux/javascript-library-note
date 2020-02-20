@@ -6,21 +6,22 @@
 </head>
 <body>
 <pre>
-<span data-note='{"htmlContent": "Division correspondant à l&apos;entête", "startTime": 5000, "runningTime": 10000}'>IDENTIFICATION DIVISION</span><span data-note='{"htmlContent": "Une phrase se termine par un point", "startTime": 1000, "runningTime": 4000}'>.</span>
-<span data-note='{"htmlContent": "Permet de spécifier le nom du programme", "startTime": 15000, "runningTime": 5000}'>PROGRAM-ID.</span> <span data-note='{"htmlContent": "Nom du programme", "startTime": 20000, "runningTime": 5000}'>PlusOuMoins.</span>
+<span data-note='{"htmlContent": "Un commentaire démarre par une étoile", "startTime": 0, "runningTime": 4500}'>*</span> Les bases du Cobol : https://zestedesavoir.com/tutoriels/685/la-programmation-cobol/739_les-bases-du-cobol/3401_vos-premiers-pas/
+<span data-note='{"htmlContent": "Division correspondant à l&apos;entête", "startTime": 9000, "runningTime": 6000}'>IDENTIFICATION DIVISION</span><span data-note='{"htmlContent": "Une phrase se termine par un point", "startTime": 4500, "runningTime": 4500}'>.</span>
+<span data-note='{"htmlContent": "Mot clé suivi du nom du programme", "startTime": 15000, "runningTime": 5000}'>PROGRAM-ID.</span> <span data-note='{"htmlContent": "Nom du programme", "startTime": 20000, "runningTime": 5000}'>PlusOuMoins</span>.
 
-<span data-note='{"htmlContent": "Division correspondant aux déclarations", "startTime": 5000, "runningTime": 10000}'>DATA DIVISION</span>.
+<span data-note='{"htmlContent": "Division correspondant aux déclarations", "startTime": 9000, "runningTime": 6000}'>DATA DIVISION</span>.
 <span data-note='{"htmlContent": "Section pour déclarer les variables", "startTime": 25000, "runningTime": 5000}'>WORKING-STORAGE SECTION.</span>
 
-<span data-note='{"htmlContent": "Ceci est une variable COBOL", "startTime": 30000, "runningTime": 4000}'>77</span> <span data-note='{"htmlContent": "Nom de la variable", "startTime": 34000, "runningTime": 4000}'>seed</span> <span data-note='{"htmlContent": "Définition du format de la variable", "startTime": 38000, "runningTime": 4000}'>PIC</span> <span data-note='{"htmlContent": "Format de la variable : 8 chiffres", "startTime": 42000, "runningTime": 4000}'>9(8)</span> <span data-note='{"htmlContent": "Valeur par défaut de la variable", "startTime": 46000, "runningTime": 4000}'>VALUE 0</span>.
+<span data-note='{"htmlContent": "L&apos;étiquette 77 correspond à la déclaration d&apos;une variable COBOL", "startTime": 30000, "runningTime": 4000}'>77</span> <span data-note='{"htmlContent": "Nom de la variable", "startTime": 34000, "runningTime": 4000}'>seed</span> <span data-note='{"htmlContent": "Mot clé précédent le format de la variable", "startTime": 38000, "runningTime": 4000}'>PIC</span> <span data-note='{"htmlContent": "&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;En COBOL&lt;/th&gt;&lt;th&gt;Correspondance&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;9&lt;/td&gt;&lt;td&gt;Nombre à 1 chiffre&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;9(5)&lt;/td&gt;&lt;td&gt;Nombre à 5 chiffres&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;a(10)&lt;/td&gt;&lt;td&gt;Chaîne de 10 caractères alphabétiques&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;x(25)&lt;/td&gt;&lt;td&gt;Chaîne de 25 caractères alphanumériques&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;9v9&lt;/td&gt;&lt;td&gt;Nombre à 1 chiffre et 1 décimale&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;9(3)v9(2)&lt;/td&gt;&lt;td&gt;Nombre à 3 chiffres à 2 décimales&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;s9(3)&lt;/td&gt;&lt;td&gt;Nombre à 3 chiffres signé (+) ou (-)&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;", "startTime": 42000, "runningTime": 4000}'>9(8)</span> <span data-note='{"htmlContent": "Valeur par défaut de la variable", "startTime": 46000, "runningTime": 4000}'>VALUE 0</span>.
 77 nbAleatoire PIC 999.
 77 nbEntree PIC 999.
 
 <span data-note='{"htmlContent": "Section pour gérer les entrées sorties", "startTime": 25000, "runningTime": 5000}'>SCREEN SECTION.</span>
 
 <span data-note='{"htmlContent": "Etiquette correspondant à la racine de la hiérarchie", "startTime": 50000, "runningTime": 4000}'>1</span> <span data-note='{"htmlContent": "Nom du paragraphe qui sera utilisé pour appeler son affichage", "startTime": 54000, "runningTime": 4000}'>pla-titre</span>.
-    2 BLANK SCREEN.
-    2 LINE 2 COL 15 VALUE 'Jeu du plus et du moins !'.
+    <span data-note='{"htmlContent": "Etiquette correspondant à la descente dans la hiérarchie", "startTime": 58000, "runningTime": 2000}'>2</span> <span data-note='{"htmlContent": "Efface l&apos;écran", "startTime": 60000, "runningTime": 2000}'>BLANK SCREEN</span>.
+    2 <span data-note='{"htmlContent": "Se positionne en ligne 2 colonne 15 à l&apos;écran", "startTime": 62000, "runningTime": 2000}'>LINE 2 COL 15</span> VALUE '<span data-note='{"htmlContent": "Texte à insérer à la position spécifiée", "startTime": 64000, "runningTime": 2000}'>Jeu du plus et du moins !</span>'.
 
 <span data-note='{"htmlContent": "Etiquette correspondant à la racine de la hiérarchie", "startTime": 50000, "runningTime": 4000}'>1</span> <span data-note='{"htmlContent": "Nom du paragraphe qui sera utilisé pour appeler son affichage", "startTime": 54000, "runningTime": 4000}'>pla-plus</span>.
     2 LINE 4 COL 5 VALUE 'C''est plus !'.
@@ -32,33 +33,33 @@
     2 LINE 4 COL 5 VALUE 'Bravo ! Vous avez trouve !'.
 
 <span data-note='{"htmlContent": "Etiquette correspondant à la racine de la hiérarchie", "startTime": 50000, "runningTime": 4000}'>1</span> <span data-note='{"htmlContent": "Nom du paragraphe qui sera utilisé pour appeler son affichage", "startTime": 54000, "runningTime": 4000}'>pls-nb</span>.
-    2 LINE 6 COL 5 VALUE 'Veuillez entrer un nombre : '.
-    2 PIC zzz TO nbEntree REQUIRED.
+    <span data-note='{"htmlContent": "Label pour indiquer que l&apos;on demande une saisie", "startTime": 66000, "runningTime": 2000}'>2 LINE 6 COL 5 VALUE 'Veuillez entrer un nombre : '.</span>
+    2 <span data-note='{"htmlContent": "Mot clé précédent le format de la variable", "startTime": 68000, "runningTime": 3000}'>PIC</span> zzz <span data-note='{"htmlContent": "Suivi du nom de la variable", "startTime": 71000, "runningTime": 3000}'>TO</span> nbEntree <span data-note='{"htmlContent": "Saisie obligatoire", "startTime": 74000, "runningTime": 3000}'>REQUIRED</span>.
 
 
-<span data-note='{"htmlContent": "Division correspondant aux instructions", "startTime": 5000, "runningTime": 10000}'>PROCEDURE DIVISION.</span>
+<span data-note='{"htmlContent": "Division correspondant aux instructions", "startTime": 9000, "runningTime": 6000}'>PROCEDURE DIVISION.</span>
 
-INITIALIZE nbEntree.
-MOVE FUNCTION CURRENT-DATE(9:8) TO seed.
+<span data-note='{"htmlContent": "Initialisation d&apos;une variable à la valeur dite NULL", "startTime": 77000, "runningTime": 3000}'>INITIALIZE</span> nbEntree.
+<span data-note='{"htmlContent": "Assignation d&apos;une valeur à une variable", "startTime": 80000, "runningTime": 3000}'>MOVE</span> FUNCTION CURRENT-DATE(9:8) TO seed.
 
-DISPLAY pla-titre.
+<span data-note='{"htmlContent": "Affichage d&apos;une plage", "startTime": 83000, "runningTime": 3000}'>DISPLAY</span> pla-titre.
 
-COMPUTE nbAleatoire = FUNCTION RANDOM (seed) * 100 + 1.
+<span data-note='{"htmlContent": "Calcul sur une variable", "startTime": 86000, "runningTime": 3000}'>COMPUTE</span> nbAleatoire = FUNCTION RANDOM (seed) * 100 + 1.
 
-PERFORM UNTIL nbEntree = nbAleatoire
+<span data-note='{"htmlContent": "Boucle avec condition d&apos;arrêt", "startTime": 89000, "runningTime": 4000}'>PERFORM UNTIL</span> nbEntree = nbAleatoire
    DISPLAY pls-nb
-   ACCEPT pls-nb
+   <span data-note='{"htmlContent": "Saisie de la valeur d&apos;une variable", "startTime": 93000, "runningTime": 3000}'>ACCEPT</span> pls-nb
 
-   IF nbEntree > nbAleatoire THEN
+   <span data-note='{"htmlContent": "Si condition", "startTime": 96000, "runningTime": 4000}'>IF</span> nbEntree > nbAleatoire THEN
        DISPLAY pla-moins
-   ELSE
+   <span data-note='{"htmlContent": "Sinon", "startTime": 96000, "runningTime": 4000}'>ELSE</span>
        DISPLAY pla-plus
-   END-IF
-END-PERFORM.
+   <span data-note='{"htmlContent": "Fin", "startTime": 96000, "runningTime": 4000}'>END-IF</span>
+<span data-note='{"htmlContent": "Fin de la boucle", "startTime": 89000, "runningTime": 4000}'>END-PERFORM.</span>
 
 DISPLAY pla-trouve.
 
-STOP RUN.
+<span data-note='{"htmlContent": "Arrêt du programme", "startTime": 100000, "runningTime": 2000}'>STOP RUN</span>.
 </pre>
 </body>
 </html>
